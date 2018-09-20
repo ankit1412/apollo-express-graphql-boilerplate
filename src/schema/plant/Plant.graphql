@@ -1,0 +1,5 @@
+type Plant {
+  id: ID!
+  name: String!
+  organization: Organization
+}

@@ -1,0 +1,9 @@
+type Mutation {
+  completeRegistration(
+    id: ID!,
+    firstName: String!,
+    lastName: String!,
+    username: String!,
+    password: String!
+): [Error!]
+}

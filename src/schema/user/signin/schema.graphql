@@ -1,0 +1,8 @@
+type SigninResponse {
+  errors: [Error!]
+  token: String
+}
+
+type Mutation {
+  signin(username: String!, password: String!): SigninResponse!
+}

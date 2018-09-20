@@ -1,0 +1,22 @@
+type User {
+  id: ID!
+  firstName: String!
+  lastName: String
+  username: String!
+  email: String
+  domain: String
+  phone: String
+  organization: Organization!
+  plant: Plant
+  role: Role!
+  specialPermissions: [Permission!]
+  avatar: String
+  accountStatus: UserStatus!
+}
+
+enum UserStatus {
+  PENDING
+  VERIFIED
+  ACTIVE
+  LOCKED
+}

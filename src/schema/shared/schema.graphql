@@ -1,0 +1,21 @@
+directive @isAuthenticated on FIELD | FIELD_DEFINITION
+directive @hasRole(role: String) on FIELD | FIELD_DEFINITION
+#  TODO: Add permission input
+# directive @hasPermission(permission: [PermissionInput!]) on FIELD | FIELD_DEFINITION
+
+type Error {
+  path: String
+  message: String
+}
+
+type Permission {
+  kind: String!
+  action: Action!
+}
+
+type Action {
+  create: Boolean
+  read: Boolean
+  update: Boolean
+  delete: Boolean
+}
